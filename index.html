@@ -15,6 +15,9 @@
         html {
           background: #FFF;
         }
+        input {
+          display: none;
+        }
       }
 
       /* global rules */
@@ -25,8 +28,8 @@
         font-family: Helvetica, Arial, sans-serif;
         font-size: 14px;
         margin: 0 auto;
-        max-width: 680px;
-        padding: 30px;
+        width: 680px;
+        padding: 40px 20px;
         background: #FFF;
         line-height: 20px;
         -webkit-print-color-adjust: exact;
@@ -61,21 +64,33 @@
       dd {
         margin-left: 0;
       }
+      input {
+        cursor: pointer;
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        padding: 10px 20px;
+        background: #000;
+        border: 0;
+        color: #fff;
+        border-radius: 5px;
+      }
 
       /* Header content */
       header {
-        align-items: flex-end;
         display: flex;
         margin-left: 145px;
         margin-bottom: 30px;
-        justify-content: space-between;
       }
       header > div {
-        display: flex;
+        margin-top: -16px;
       }
-      header a:first-child {
+      header address {
+        margin-top: 10px;
+      }
+      header a {
         display: inline-block;
-        margin-right: 20px;
+        margin-right: 15px;
       }
 
       /* JS logo icon thing */
@@ -180,18 +195,24 @@
   </head>
   <body>
     <header>
+      <figure><div></div></figure>
       <div>
-        <figure><div></div></figure>
         <h1>Justin Schrader</h1>
+        <address>
+          <a href="mailto:me@justin.beer">
+            me@justin.beer
+          </a>
+          <a href="tel:+15852810579">
+            (585) 281-0579
+          </a>
+          <a
+            href="https://github.com/icd2k3"
+            target="_blank"
+          >
+            github.com/icd2k3
+          </a>
+        </address>
       </div>
-      <address>
-        <a href="mailto:me@justin.beer">
-          me@justin.beer
-        </a>
-        <a href="tel:+15852810579">
-          (585) 281-0579
-        </a>
-      </address>
     </header>
     <main>
       <section>
@@ -345,27 +366,6 @@
         </div>
       </section>
     </main>
-    <footer>
-      <address>
-        <a href="mailto:me@justin.beer">
-          me@justin.beer
-        </a>
-        <a href="tel:+15852810579">
-          (585) 281-0579
-        </a>
-        <a
-          href="https://github.com/icd2k3"
-          target="_blank"
-        >
-          github.com/icd2k3
-        </a>
-        <a
-          href="https://www.linkedin.com/in/justin-schrader/"
-          target="_blank"
-        >
-          linkedin.com/in/justin-schrader
-        </a>
-      </address>
-    </footer>
+    <input type="button" value="I still own a printer" onClick="window.print()">
   </body>
 </html>
