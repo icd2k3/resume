@@ -18,6 +18,15 @@
         input {
           display: none;
         }
+        body section {
+          margin: 10px 0 0 0;
+        }
+        body section:nth-child(3) {
+          margin: 20px 0 10px;
+        }
+        body dl {
+          margin-bottom: 0;
+        }
       }
 
       /* global rules */
@@ -42,8 +51,10 @@
       }
       h2 {
         color: #666;
-        font-size: 18px;
+        font-size: 14px;
         text-align: right;
+        text-transform: uppercase;
+        font-weight: normal;
       }
       h3 {
         font-size: 18px;
@@ -79,14 +90,14 @@
       /* Header content */
       header {
         display: flex;
-        margin-left: 145px;
+        margin-left: 165px;
         margin-bottom: 30px;
       }
       header > div {
-        margin-top: -16px;
+        margin-top: -12px;
       }
       header address {
-        margin-top: 10px;
+        margin-top: 8px;
       }
       header a {
         display: inline-block;
@@ -122,7 +133,7 @@
         content: "";
         display: block;
         height: 5px;
-        width: 22px;
+        width: 15px;
         background: #000;
         position: absolute;
         top: 0;
@@ -140,10 +151,13 @@
       /* main content rows */
       section {
         display: grid;
-        grid-template-columns: 100px auto;
+        grid-template-columns: 120px auto;
         grid-gap: 20px;
         grid-auto-rows: minmax(0, auto);
-        margin-top: 10px;
+        margin: 30px 0;
+      }
+      section:nth-child(3) {
+        margin: 0 0 -10px;
       }
 
       /* right side text positioning */
@@ -151,6 +165,10 @@
         display: flex;
         flex-wrap: wrap;
         align-items: baseline;
+        margin-bottom: 30px;
+      }
+      dl:last-child {
+        margin-bottom: 0;
       }
       dl:first-child {
         margin-top: 0;
@@ -166,6 +184,7 @@
         flex-basis: 100%;
         width: 0;
         margin-top: 3px;
+        color: #666;
       }
 
       /* skills */
@@ -257,7 +276,7 @@
             <dd>
               Koan develops goal tracking and status reporting software for managers.
               As part of the original team, I was tasked with creating the initial version of the React app.
-              I also setup React tooling & build processes, implemented CI workflows and error tracking, and worked closely
+              I also setup React tooling & build processes, implemented CI and error tracking, and worked closely
               with designers and other engineers to define and build new features.
             </dd>
           </dl>
