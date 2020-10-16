@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="Description" content="Justin Schrader's resume">
+    <title>Justin's Resume</title>
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <style>
+      /* printing rules */
+      @page {
+        size: A4;
+      }
+      @media print {
+        html {
+          background: #FFF;
+        }
+      }
+
+      /* global rules */
+      html {
+        background: #F1F1F1;
+      }
+      body {
+        font-family: Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        margin: 0 auto;
+        max-width: 680px;
+        padding: 30px;
+        background: #FFF;
+        line-height: 20px;
+      }
+      h1,
+      h2,
+      h3,
+      h4 {
+        margin: 0;
+      }
+      h2 {
+        color: #666;
+        font-size: 20px;
+      }
+      h3 {
+        font-size: 18px;
+      }
+      p:first-child {
+        margin-top: 0;
+      }
+      address {
+        font-style: normal;
+      }
+      a {
+        color: #000;
+        text-decoration: none;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+      dd {
+        margin-left: 0;
+      }
+
+      /* Header content */
+      header {
+        display: flex;
+        margin-left: 150px;
+        margin-bottom: 30px;
+        justify-content: space-between;
+      }
+      header > div {
+        display: flex;
+      }
+      header a:first-child {
+        display: inline-block;
+        margin-right: 20px;
+      }
+
+      /* JS logo icon thing */
+      figure {
+        width: 25px;
+        height: 25px;
+        flex-shrink: 0;
+        margin: 0;
+        left: -20px;
+        position: relative;
+        transform: rotate(-45deg);
+        margin-inline-start: 0;
+        margin-inline-end: 0;
+        box-sizing: border-box;
+        border-right: 5px solid #000;
+        border-bottom: 5px solid #000;
+      }
+      figure::before {
+        content: "";
+        display: block;
+        height: 5px;
+        width: 5px;
+        background: #000;
+        position: absolute;
+        top: -10px;
+        left: 10px;
+      }
+      figure::after {
+        content: "";
+        display: block;
+        height: 5px;
+        width: 22px;
+        background: #000;
+        position: absolute;
+        top: 0;
+        left: 20px;
+      }
+      figure > div {
+        width: 15px;
+        height: 15px;
+        position: absolute;
+        border-right: inherit;
+        border-bottom: inherit;
+        box-sizing: border-box;
+      }
+
+      /* main content rows */
+      section {
+        display: grid;
+        grid-template-columns: 120px auto;
+        grid-gap: 10px;
+        grid-auto-rows: minmax(0, auto);
+        margin-top: 10px;
+      }
+
+      /* right side text positioning */
+      dl {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: baseline;
+      }
+      dl:first-child {
+        margin-top: 0;
+      }
+      dd:nth-child(2) {
+        margin: 0 10px;
+      }
+      dd:nth-child(3) {
+        color: #666;
+        font-size: 12px;
+      }
+      dd:nth-child(4) {
+        flex-basis: 100%;
+        width: 0;
+        margin-top: 5px;
+      }
+
+      /* skills */
+      ul {
+        padding: 0;
+        margin: 0;
+        list-style-type: none;
+      }
+      li {
+        display: inline-block;
+        padding: 5px 10px;
+        background: #F1F1F1;
+        margin-right: 10px;
+        border-radius: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div>
+        <figure><div></div></figure>
+        <h1>Justin Schrader</h1>
+      </div>
+      <address>
+        <a href="mailto:me@justin.beer">
+          me@justin.beer
+        </a>
+        <a href="tel:+15852810579">
+          (585) 281-0579
+        </a>
+      </address>
+    </header>
+    <main>
+      <section>
+        <h2>Hello</h2>
+        <div>
+          <p>I'm Justin. I like building user interfaces. Also, burritos.</p>
+          <p>I have over 10 years of experience working on everything from marketing websites to large data driven applications.</p>
+          <p>My original background and education was in design and animation. I really enjoy working with designers to deliver the best user experience possible.</p>
+        </div>
+      </section>
+      <section>
+        <h2>Experience</h2>
+        <div>
+          <dl>
+            <dt>
+              <h3>New Relic</h3>
+            </dt>
+            <dd>
+              <h4>Senior Software Engineer</h4>
+            </dd>
+            <dd>
+              <time datetime="2018-10-01">Oct. 2018</time> - Present
+            </dd>
+            <dd>
+              New Relic develops cloud-based software to help website and application owners track the performances of their services.
+              As a member of the Distributed Tracing team I build complex React features with large datasets, define engineering process
+              & tooling decisions, improve automated testing, and maintain several other legacy features.
+            </dd>
+          </dl>
+          <dl>
+            <dt>
+              <h3>Koan</h3>
+            </dt>
+            <dd>
+              <h4>Senior Frontend Engineer</h4>
+            </dd>
+            <dd>
+              <time datetime="2016-11-01">Nov. 2016</time> - <time datetime="2018-10-01">Oct. 2018</time>
+            </dd>
+            <dd>
+              Koan develops goal tracking and status reporting software for managers.
+              As part of the original team, I was tasked with creating the initial version of the React app.
+              I also setup React tooling & build processes, implemented CI workflows and error tracking, and worked closely
+              with designers and other engineers to define and build new features.
+            </dd>
+          </dl>
+          <dl>
+            <dt>
+              <h3>Cengage</h3>
+            </dt>
+            <dd>
+              <h4>Senior Application Architect</h4>
+            </dd>
+            <dd>
+              <time datetime="2015-10-01">Oct. 2015</time> - <time datetime="2016-10-01">Oct. 2016</time>
+            </dd>
+            <dd>
+              Cengage develops digital learning platforms for teachers and students around the world.
+              I was brought on as part of an acquisition of Pathbrite (below).
+              During my time here I maintained the Pathbrite platform, developed new React applications, and participated in research projects and POCs.
+            </dd>
+          </dl>
+          <dl>
+            <dt>
+              <h3>Pathbrite</h3>
+            </dt>
+            <dd>
+              <h4>Lead Frontend Engineer</h4>
+            </dd>
+            <dd>
+              <time datetime="2018-03-01">Mar. 2013</time> - <time datetime="2015-10-01">Oct. 2015</time>
+            </dd>
+            <dd>
+              Pathbrite is a portfolio, assessment, and learning management system for teachers, students, and employers.
+              During my time here I worked on a large Backbone application, developed new features, refactored old features,
+              optimized for mobile screens, and improved build and tooling processes.
+            </dd>
+          </dl>
+          <dl>
+            <dt>
+              <h3>Luxurious Animals</h3>
+            </dt>
+            <dd>
+              <h4>Senior Interactive Developer</h4>
+            </dd>
+            <dd>
+              <time datetime="2008-07-01">Jul. 2008</time> - <time datetime="2018-03-01">Mar. 2013</time>
+            </dd>
+            <dd>
+              Luxurious Animals is a creative digital agency featuring clients such as HBO, Morgan Stanley, and Porsche.
+              During my time here I engineered custom solutions, under tight deadlines (individually and in small teams),
+              for websites, games, web apps, and more.
+            </dd>
+          </dl>
+          <dl>
+            <dt>
+              <h3>Big Spaceship</h3>
+            </dt>
+            <dd>
+              <h4>Design & Animation Internship</h4>
+            </dd>
+            <dd>
+              <time datetime="2007-06-01">Jun. 2007</time> - <time datetime="2007-09-01">Sept. 2007</time>
+            </dd>
+            <dd>
+              Summer internship where I worked alongside experienced agency employees.
+            </dd>
+          </dl>
+          <dl>
+            <dt>
+              <h3>Blue Pixel Studios & Freelance</h3>
+            </dt>
+            <dd>
+              <h4>Design & Development</h4>
+            </dd>
+            <dd>
+              <time datetime="2006-06-01">Jun. 2006</time> - <time datetime="2008-08-01">Aug. 2008</time>
+            </dd>
+            <dd>
+              During this time I worked with a small agency in my hometown (Blue Pixel Studios) to 
+              design and develop websites for local businesses. I also freelanced for other random clients
+              during this time unrelated to the agency.
+            </dd>
+          </dl>
+        </div>
+      </section>
+      <section>
+        <h2>Key Skills</h2>
+        <ul>
+          <li>Javascript</li>
+          <li>React</li>
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>UX</li>
+          <li>CI & Tooling</li>
+        </ul>
+      </section>
+      <section>
+        <h2>Education</h2>
+        <div>
+          <dl>
+            <dt>
+              <h3>Rochester Institute of Technology</h3>
+            </dt>
+            <dd>
+              <h4>New Media Design & Imaging</h4>
+            </dd>
+            <dd>
+              <time datetime="2004">2004</time> - <time datetime="2008">2008</time>
+            </dd>
+          </dl>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <address>
+        <a href="mailto:me@justin.beer">
+          me@justin.beer
+        </a>
+        <a href="tel:+15852810579">
+          (585) 281-0579
+        </a>
+        <a
+          href="https://www.linkedin.com/in/justin-schrader/"
+          target="_blank"
+        >
+          linkedin.com/in/justin-schrader/
+        </a>
+      </address>
+    </footer>
+  </body>
+</html>
