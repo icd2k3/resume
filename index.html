@@ -29,6 +29,7 @@
         padding: 30px;
         background: #FFF;
         line-height: 20px;
+        -webkit-print-color-adjust: exact;
       }
       h1,
       h2,
@@ -38,7 +39,8 @@
       }
       h2 {
         color: #666;
-        font-size: 20px;
+        font-size: 18px;
+        text-align: right;
       }
       h3 {
         font-size: 18px;
@@ -62,8 +64,9 @@
 
       /* Header content */
       header {
+        align-items: flex-end;
         display: flex;
-        margin-left: 150px;
+        margin-left: 145px;
         margin-bottom: 30px;
         justify-content: space-between;
       }
@@ -122,8 +125,8 @@
       /* main content rows */
       section {
         display: grid;
-        grid-template-columns: 120px auto;
-        grid-gap: 10px;
+        grid-template-columns: 100px auto;
+        grid-gap: 20px;
         grid-auto-rows: minmax(0, auto);
         margin-top: 10px;
       }
@@ -147,7 +150,7 @@
       dd:nth-child(4) {
         flex-basis: 100%;
         width: 0;
-        margin-top: 5px;
+        margin-top: 3px;
       }
 
       /* skills */
@@ -155,6 +158,8 @@
         padding: 0;
         margin: 0;
         list-style-type: none;
+        position: relative;
+        top: -4px;
       }
       li {
         display: inline-block;
@@ -162,6 +167,14 @@
         background: #F1F1F1;
         margin-right: 10px;
         border-radius: 5px;
+      }
+
+      /* footer */
+      footer address {
+        display: flex;
+        justify-content: space-between;
+        border-top: 1px solid #CCC;
+        padding-top: 10px;
       }
     </style>
   </head>
@@ -185,8 +198,10 @@
         <h2>Hello</h2>
         <div>
           <p>I'm Justin. I like building user interfaces. Also, burritos.</p>
-          <p>I have over 10 years of experience working on everything from marketing websites to large data driven applications.</p>
-          <p>My original background and education was in design and animation. I really enjoy working with designers to deliver the best user experience possible.</p>
+          <p>
+            I have over 10 years of experience working on everything from marketing websites to large data driven applications.
+            I enjoy working with teams to deliver the best user experience possible.
+          </p>
         </div>
       </section>
       <section>
@@ -254,7 +269,7 @@
             <dd>
               Pathbrite is a portfolio, assessment, and learning management system for teachers, students, and employers.
               During my time here I worked on a large Backbone application, developed new features, refactored old features,
-              optimized for mobile screens, and improved build and tooling processes.
+              optimized for mobile, and improved build/tooling processes.
             </dd>
           </dl>
           <dl>
@@ -269,8 +284,7 @@
             </dd>
             <dd>
               Luxurious Animals is a creative digital agency featuring clients such as HBO, Morgan Stanley, and Porsche.
-              During my time here I engineered custom solutions, under tight deadlines (individually and in small teams),
-              for websites, games, web apps, and more.
+              During my time here I engineered custom solutions, under tight deadlines, for websites, games, web apps, and more.
             </dd>
           </dl>
           <dl>
@@ -289,24 +303,22 @@
           </dl>
           <dl>
             <dt>
-              <h3>Blue Pixel Studios & Freelance</h3>
+              <h3>Blue Pixel Studios</h3>
             </dt>
             <dd>
-              <h4>Design & Development</h4>
+              <h4>Freelance</h4>
             </dd>
             <dd>
               <time datetime="2006-06-01">Jun. 2006</time> - <time datetime="2008-08-01">Aug. 2008</time>
             </dd>
             <dd>
-              During this time I worked with a small agency in my hometown (Blue Pixel Studios) to 
-              design and develop websites for local businesses. I also freelanced for other random clients
-              during this time unrelated to the agency.
+              Design and development work for businesses in my hometown.
             </dd>
           </dl>
         </div>
       </section>
       <section>
-        <h2>Key Skills</h2>
+        <h2>Strengths</h2>
         <ul>
           <li>Javascript</li>
           <li>React</li>
@@ -321,7 +333,7 @@
         <div>
           <dl>
             <dt>
-              <h3>Rochester Institute of Technology</h3>
+              <h3>RIT</h3>
             </dt>
             <dd>
               <h4>New Media Design & Imaging</h4>
@@ -345,7 +357,7 @@
           href="https://www.linkedin.com/in/justin-schrader/"
           target="_blank"
         >
-          linkedin.com/in/justin-schrader/
+          linkedin.com/in/justin-schrader
         </a>
       </address>
     </footer>

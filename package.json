@@ -1,0 +1,21 @@
+{
+  "name": "resume",
+  "version": "1.0.0",
+  "description": "Justin's resume",
+  "main": "index.html",
+  "scripts": {
+    "build": "html-minifier index.html -o justin-schraders-resume.html --collapse-whitespace --remove-comments --remove-optional-tags --remove-redundant-attributes --remove-script-type-attributes --remove-tag-whitespace --use-short-doctype --minify-css true"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/icd2k3/resume.git"
+  },
+  "author": "Justin Schrader",
+  "bugs": {
+    "url": "https://github.com/icd2k3/resume/issues"
+  },
+  "homepage": "https://github.com/icd2k3/resume#readme",
+  "devDependencies": {
+    "html-minifier": "^4.0.0"
+  }
+}
