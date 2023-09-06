@@ -1,1 +1,1 @@
-[Résumé](http://justin.beer/resume/justin-schrader-resume.html)
+[Résumé](http://justin.beer/resume)
