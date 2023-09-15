@@ -15,7 +15,7 @@
         html {
           background: #FFF;
         }
-        input {
+        button {
           display: none;
         }
         body section {
@@ -75,16 +75,24 @@
       dd {
         margin-left: 0;
       }
-      input {
-        cursor: pointer;
+      footer {
+        display: flex;
         position: fixed;
         bottom: 20px;
         right: 20px;
+      }
+
+      button {
+        margin-left: 10px;
+        cursor: pointer;
         padding: 10px 20px;
         background: #000;
         border: 0;
         color: #fff;
         border-radius: 5px;
+      }
+      button:first-child {
+        right: 100px;
       }
 
       /* Header content */
@@ -386,6 +394,9 @@
         </div>
       </section>
     </main>
-    <input type="button" value="I still own a printer" onClick="window.print()">
+    <footer>
+      <button aria-label="PDF" type="button" onClick="window.location.href='justin-schrader-resume.pdf'">PDF</button>
+      <button aria-label="Print" type="button" onClick="window.print()">I still own a printer</button>
+    </footer>
   </body>
 </html>
