@@ -15,7 +15,7 @@
         html {
           background: #FFF;
         }
-        button {
+        footer a {
           display: none;
         }
         body section {
@@ -74,25 +74,6 @@
       }
       dd {
         margin-left: 0;
-      }
-      footer {
-        display: flex;
-        position: fixed;
-        bottom: 20px;
-        right: 20px;
-      }
-
-      button {
-        margin-left: 10px;
-        cursor: pointer;
-        padding: 10px 20px;
-        background: #000;
-        border: 0;
-        color: #fff;
-        border-radius: 5px;
-      }
-      button:first-child {
-        right: 100px;
       }
 
       /* Header content */
@@ -212,11 +193,20 @@
       }
 
       /* footer */
-      footer address {
+      footer {
         display: flex;
-        justify-content: space-between;
-        border-top: 1px solid #CCC;
-        padding-top: 10px;
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+      }
+      footer a {
+        margin-left: 10px;
+        cursor: pointer;
+        padding: 10px 20px;
+        background: #000;
+        border: 0;
+        color: #fff;
+        border-radius: 5px;
       }
     </style>
   </head>
@@ -395,8 +385,7 @@
       </section>
     </main>
     <footer>
-      <button aria-label="PDF" type="button" onClick="window.location.href='justin-schrader-resume.pdf'">PDF</button>
-      <button aria-label="Print" type="button" onClick="window.print()">I still own a printer</button>
+      <a aria-label="PDF" href="justin-schrader-resume.pdf">PDF version</a>
     </footer>
   </body>
 </html>
