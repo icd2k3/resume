@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="Description" content="Justin Schrader's resume">
-    <title>Justin's Resume</title>
+    <title>Justin Schrader's Resume</title>
     <link href="https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap" rel="stylesheet">
     <style>
       /* printing rules */
@@ -15,11 +15,11 @@
         html {
           background: #FFF;
         }
-        footer a {
+        footer a, footer button {
           display: none;
         }
         body section {
-          margin: 10px 0 0 0;
+          margin: 20px 0 0 0;
         }
         body section:nth-child(3) {
           margin: 20px 0 10px;
@@ -51,7 +51,7 @@
       }
       h2 {
         color: #666;
-        font-size: 14px;
+        font-size: 12px;
         text-align: right;
         text-transform: uppercase;
         font-weight: normal;
@@ -59,8 +59,14 @@
       h3 {
         font-size: 18px;
       }
+      h3 span {
+        font-size: 16px;
+      }
       p:first-child {
         margin-top: 0;
+      }
+      p:last-child {
+        margin-bottom: 0;
       }
       address {
         font-style: normal;
@@ -79,7 +85,7 @@
       /* Header content */
       header {
         display: flex;
-        margin-left: 165px;
+        margin-left: 155px;
         margin-bottom: 30px;
       }
       header > div {
@@ -140,7 +146,7 @@
       /* main content rows */
       section {
         display: grid;
-        grid-template-columns: 120px auto;
+        grid-template-columns: 110px auto;
         grid-gap: 20px;
         grid-auto-rows: minmax(0, auto);
         margin: 30px 0;
@@ -154,7 +160,7 @@
         display: flex;
         flex-wrap: wrap;
         align-items: baseline;
-        margin-bottom: 30px;
+        margin-bottom: 20px;
       }
       dl:last-child {
         margin-bottom: 0;
@@ -176,15 +182,20 @@
         color: #666;
       }
 
-      /* skills */
       ul {
+        margin: 10px 0 0 0;
+        padding: 0 17px;
+      }
+
+      /* techs */
+      ul.tech {
         padding: 0;
         margin: 0;
-        list-style-type: none;
+        list-style-type: circle;
         position: relative;
         top: -4px;
       }
-      li {
+      li.tech {
         display: inline-block;
         padding: 5px 10px;
         background: #F1F1F1;
@@ -199,7 +210,7 @@
         bottom: 20px;
         right: 20px;
       }
-      footer a {
+      footer a, footer button {
         margin-left: 10px;
         cursor: pointer;
         padding: 10px 20px;
@@ -207,6 +218,11 @@
         border: 0;
         color: #fff;
         border-radius: 5px;
+      }
+      footer button {
+        background: transparent;
+        border: 1px solid #000;
+        color: #000;
       }
     </style>
   </head>
@@ -216,8 +232,8 @@
       <div>
         <h1>Justin Schrader</h1>
         <address>
-          <a href="mailto:me@justin.beer">
-            me@justin.beer
+          <a href="mailto:me@justin-schrader.com">
+            me@justin-schrader.com
           </a>
           <a href="tel:+15852810579">
             (585) 281-0579
@@ -235,10 +251,10 @@
       <section>
         <h2>Hello</h2>
         <div>
-          <p>I'm Justin. I like building user interfaces. Also, burritos.</p>
+          <p>Hi, I'm Justin. I like building user interfaces.</p>
           <p>
-            I have over 15 years of experience working on everything from marketing websites to large data driven applications.
-            I enjoy working with teams to deliver the best user experience possible.
+            I have over 15 years of experience working with designers, PMs, customers, and other engineers to deliver the best UI possible.
+            I strive for reliable, performant, and well-tested code in every feature I help to create.
           </p>
         </div>
       </section>
@@ -253,31 +269,34 @@
               <h4>Senior Software Engineer</h4>
             </dd>
             <dd>
-              <time datetime="2018-10-01">Oct. 2018</time> - Present
+              <time datetime="2018-10-01">Oct. 2018</time> - Present (5y)
             </dd>
             <dd>
-              As a member of the Distributed Tracing team my responsibilities include: React development, process & tooling decisions, reliability, and automated testing.
-              <br/><br/>
-                - Worked with design and PMs to deliver big new features<br/>
-                - Refactored large areas of the codebase to improve maintainability and performance<br/>
-                - Reduced bundle size by more than 50% (while shipping new features, too)<br/>
-                - Developed solutions for parsing and displaying large datasets<br/>
-                - Improved unit and e2e test coverage<br/>
+              <b>Distributed Tracing team</b>
+              <ul>
+                <li>Worked with designers, PMs, and other engineers to deliver new features.</li>
+                <li>Helped define UI coding standards and working agreements.</li>
+                <li>Mentored, and paired with, other engineers to help them ramp up.</li>
+                <li>Reduced bundle size by a significant amount (while shipping new features).</li>
+                <li>Contributed improvements to the org-wide shared component library.</li>
+                <li>Improved test coverage, reliability, performance, and maintainability.</li>
+              </ul>
             </dd>
           </dl>
           <dl>
             <dt>
-              <h3>Koan</h3>
+              <h3>Koan <span>(acq. Quantive)</span></h3>
             </dt>
             <dd>
               <h4>Senior Frontend Engineer</h4>
             </dd>
             <dd>
-              <time datetime="2016-11-01">Nov. 2016</time> - <time datetime="2018-10-01">Oct. 2018</time>
+              <time datetime="2016-11-01">Nov. 2016</time> - <time datetime="2018-10-01">Oct. 2018</time> (2y)
             </dd>
             <dd>
-              Part of the founding team. Created the initial version of the React application, improved tooling & build processes, and worked closely with
-              designers, engineers, customers, and founders to define and build features.
+              Member of the founding team. Helped create the initial version of the React application,
+              tooling, and build process. Worked closely with the founders, designer, customers, 
+              and engineers to develop the product. Koan was a startup focused on management tools, team alignment, and OKR tracking.
             </dd>
           </dl>
           <dl>
@@ -288,22 +307,22 @@
               <h4>Senior Application Architect</h4>
             </dd>
             <dd>
-              <time datetime="2015-10-01">Oct. 2015</time> - <time datetime="2016-10-01">Oct. 2016</time>
+              <time datetime="2015-10-01">Oct. 2015</time> - <time datetime="2016-10-01">Oct. 2016</time> (1y)
             </dd>
             <dd>
               Pathbrite (below) was acquired by Cengage. My responsibilities here included maintaining the Pathbrite platform, 
-              developing new features, and participating in research and road-map planning.
+              developing new features, and participating in research and roadmap planning.
             </dd>
           </dl>
           <dl>
             <dt>
-              <h3>Pathbrite</h3>
+              <h3>Pathbrite <span>(acq. Cengage)</span></h3>
             </dt>
             <dd>
               <h4>Lead Frontend Engineer</h4>
             </dd>
             <dd>
-              <time datetime="2018-03-01">Mar. 2013</time> - <time datetime="2015-10-01">Oct. 2015</time>
+              <time datetime="2018-03-01">Mar. 2013</time> - <time datetime="2015-10-01">Oct. 2015</time> (2yr)
             </dd>
             <dd>
               Pathbrite was a portfolio platform, assessment, and LMS for teachers, students, and employers. I worked in a large 
@@ -318,7 +337,7 @@
               <h4>Senior Interactive Developer</h4>
             </dd>
             <dd>
-              <time datetime="2008-07-01">Jul. 2008</time> - <time datetime="2018-03-01">Mar. 2013</time>
+              <time datetime="2008-07-01">Jul. 2008</time> - <time datetime="2018-03-01">Mar. 2013</time> (5y)
             </dd>
             <dd>
               Engineered, designed, and animated advertising solutions for brands like HBO, Morgan Stanley, and Porsche. 
@@ -327,44 +346,30 @@
           </dl>
           <dl>
             <dt>
-              <h3>Big Spaceship</h3>
+              <h3>Freelance & Internships</h3>
             </dt>
             <dd>
-              <h4>Design & Animation Internship</h4>
+              <h4>Design, dev, and animation</h4>
             </dd>
             <dd>
-              <time datetime="2007-06-01">Jun. 2007</time> - <time datetime="2007-09-01">Sept. 2007</time>
+              <time datetime="2006-06-01">Jun. 2006</time> - <time datetime="2008-09-01">Sept. 2008</time> (2y)
             </dd>
             <dd>
-              Summer internship. Worked on a marketing site for Universal.
-            </dd>
-          </dl>
-          <dl>
-            <dt>
-              <h3>Blue Pixel Studios</h3>
-            </dt>
-            <dd>
-              <h4>Freelance</h4>
-            </dd>
-            <dd>
-              <time datetime="2006-06-01">Jun. 2006</time> - <time datetime="2008-08-01">Aug. 2008</time>
-            </dd>
-            <dd>
-              Design and development work for small businesses in my hometown.
+              2007 summer internship at Big Spaceship working on a marketing site for Universal Studios.
+              Freelance design and web dev work for Blue Pixel studios 06-08.
             </dd>
           </dl>
         </div>
       </section>
       <section>
         <h2>Strengths</h2>
-        <ul>
-          <li>Javascript</li>
-          <li>React</li>
-          <li>Redux</li>
-          <li>Typescript</li>
-          <li>CSS</li>
-          <li>UX</li>
-          <li>CI</li>
+        <ul class="tech">
+          <li class="tech">JavaScript</li>
+          <li class="tech">React</li>
+          <li class="tech">Redux</li>
+          <li class="tech">Typescript</li>
+          <li class="tech">Test Coverage</li>
+          <li class="tech">UI/UX</li>
         </ul>
       </section>
       <section>
@@ -385,7 +390,8 @@
       </section>
     </main>
     <footer>
-      <a aria-label="PDF" href="justin-schrader-resume.pdf">PDF version</a>
+      <button aria-label="Print" onclick="window.print()">Print</button>
+      <a aria-label="PDF" href="justin-schrader-resume.pdf">PDF</a>
     </footer>
   </body>
 </html>
