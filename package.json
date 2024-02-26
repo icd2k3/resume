@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Justin Schrader's resume",
   "main": "index.html",
+  "private": true,
   "scripts": {
     "actions:release:dryrun": "sh ./scripts/release-action-dryrun.sh",
     "build": "mkdir -p dist && npm run html && npm run pdf",
