@@ -1,0 +1,22 @@
+name: 'FTP deploy'
+description: 'Deploys to both domains (justin.beer and justin-schrader.com)'
+inputs:
+  server-dir:
+    description: 'Output directory on the server'
+    required: true
+    default: 'public_html/resume/'
+runs:
+  using: "composite"
+  steps:
+    - name: Prepare deploy
+      run: echo "${{ inputs.server-dir }}"
+
+    - name: Deploy ${{ inputs.server-dir }}
+      uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+      with: 
+        server: ftp.justin.beer
+        username: admin@justin.beer
+        password: ${{ secrets.FTP_PASSWORD || 'mock-ftp-pass' }}
+        local-dir: ./dist/
+        server-dir: ${{ inputs.server-dir }}
+        dry-run: ${{ env.ACT }}

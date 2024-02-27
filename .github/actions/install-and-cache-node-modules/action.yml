@@ -1,0 +1,19 @@
+name: 'Install and cache node modules'
+description: 'Installs all dependencies and saves them to a cache'
+runs:
+  using: "composite"
+  steps:    
+    - uses: actions/cache@v4
+      id: node-modules-cache
+      with:
+        path: '**/node_modules'
+        key: ${{ runner.os }}-node-modules-${{ hashFiles('**/package-lock.json') }}
+        restore-keys: |
+          ${{ runner.os }}-node-modules-
+
+    - name: Install dependencies
+      if: steps.node-modules-cache.outputs.cache-hit != 'true'
+      run: npm ci
+
+    - name: Install chrome for puppeteer (PDF generation)
+      run: npx puppeteer browsers install chrome
