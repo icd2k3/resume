@@ -21,7 +21,7 @@ runs:
       with: 
         server: ftp.justin.beer
         username: admin@justin.beer
-        password: ${{ inputs.password }}
+        password: ${{ inputs.password || 'not-a-real-password' }}
         local-dir: ./dist/
         server-dir: ${{ inputs.server-dir }}
         dry-run: ${{ env.ACT }}
