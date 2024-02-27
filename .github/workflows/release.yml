@@ -25,12 +25,6 @@ jobs:
       - name: Build
         run: npm run build
 
-      - name: Release
-        id: semantic
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        uses: cycjimmy/semantic-release-action@v4
-
       - name: Deploy (justin.beer)
         uses: ./.github/actions/ftp-deploy/
         with:
