@@ -9,6 +9,7 @@ runs:
   using: "composite"
   steps:
     - name: Prepare deploy
+      shell: bash
       run: echo "${{ inputs.server-dir }}"
 
     - name: Deploy ${{ inputs.server-dir }}
