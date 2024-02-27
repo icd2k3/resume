@@ -19,7 +19,7 @@
   "bugs": {
     "url": "https://github.com/icd2k3/resume/issues"
   },
-  "homepage": "https://github.com/icd2k3/resume#readme",
+  "homepage": "https://justin-schrader.com/resume",
   "devDependencies": {
     "@commitlint/cli": "^18.6.0",
     "@commitlint/config-conventional": "^18.6.0",
