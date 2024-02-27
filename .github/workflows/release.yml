@@ -17,10 +17,10 @@ jobs:
       pull-requests: write
       id-token: write
     steps:
-      - uses: actions/checkout@main
-      - uses: ./.github/actions/install-node
-      - uses: ./.github/actions/install-and-cache-node-modules
-      - uses: ./.github/actions/install-linux-dependencies
+      - uses: actions/checkout@v4
+      - uses: ./.github/actions/install-node/
+      - uses: ./.github/actions/install-and-cache-node-modules/
+      - uses: ./.github/actions/install-linux-dependencies/
 
       - name: Build
         run: npm run build
@@ -32,11 +32,11 @@ jobs:
         uses: cycjimmy/semantic-release-action@v4
 
       - name: Deploy (justin.beer)
-        uses: './.github/actions/ftp-deploy'
+        uses: ./.github/actions/ftp-deploy/
         with:
           server-dir: public_html/resume/
 
       - name: Deploy (justin-schrader.com)
-        uses: './.github/actions/ftp-deploy'
+        uses: ./.github/actions/ftp-deploy/
         with:
           server-dir: public_html/justin-schrader.com/resume/
