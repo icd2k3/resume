@@ -13,7 +13,9 @@ runs:
 
     - name: Install dependencies
       if: steps.node-modules-cache.outputs.cache-hit != 'true'
+      shell: bash
       run: npm ci
 
     - name: Install chrome for puppeteer (PDF generation)
+      shell: bash
       run: npx puppeteer browsers install chrome
