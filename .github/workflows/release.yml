@@ -5,28 +5,11 @@ on:
       - master
 
 permissions:
-  contents: read # for checkout
+  contents: read
 
 jobs:
-  build:
-    name: Build
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@main
-      - uses: ./.github/actions/install-node
-      - uses: ./.github/actions/install-and-cache-node-modules
-      - uses: ./.github/actions/install-linux-dependencies
-      
-      - name: Build
-        run: npm run build
-      - name: Archive production artifact
-        uses: actions/upload-artifact@v3
-        with:
-          name: dist
-          path: dist
   release:
     name: Release
-    needs: build
     runs-on: ubuntu-latest
     permissions:
       contents: write
@@ -37,12 +20,10 @@ jobs:
       - uses: actions/checkout@main
       - uses: ./.github/actions/install-node
       - uses: ./.github/actions/install-and-cache-node-modules
+      - uses: ./.github/actions/install-linux-dependencies
 
-      - name: Download artifact
-        uses: actions/download-artifact@v3
-        with: 
-          name: dist
-          path: dist
+      - name: Build
+        run: npm run build
 
       - name: Release
         id: semantic
@@ -50,13 +31,12 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         uses: cycjimmy/semantic-release-action@v4
 
-      - name: Deploy justin.beer
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
-        with: 
-          server: ftp.justin.beer
-          username: admin@justin.beer
-          password: ${{ secrets.FTP_PASSWORD || 'mock-ftp-pass' }}
-          local-dir: ./dist/
+      - name: Deploy (justin.beer)
+        uses: './.github/actions/ftp-deploy'
+        with:
           server-dir: public_html/resume/
-          dry-run: ${{ env.ACT }}
 
+      - name: Deploy (justin-schrader.com)
+        uses: './.github/actions/ftp-deploy'
+        with:
+          server-dir: public_html/justin-schrader.com/resume/
