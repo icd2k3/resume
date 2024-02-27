@@ -1,6 +1,6 @@
 ### [justin-schrader.com/resume](https://justin-schrader.com/resume)
 
-## Why did I make this repo
+## Why did I make this repo?
 I created my resume in HTML/CSS years ago (because why not?) but recently got tired of manually compressing and uploading it.
 
 ### Before
