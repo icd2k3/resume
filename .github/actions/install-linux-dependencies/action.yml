@@ -1,0 +1,10 @@
+name: 'Install linux dependencies'
+description: 'Installs all linux dependencies needed for puppeteer PDF generation'
+runs:
+  using: "composite"
+  steps:    
+    - name: Update apt-get
+      run: sudo apt-get update
+
+    - name: Install linux dependencies
+      run: sudo apt-get install -y libgtk-3-dev libnotify-dev libgconf-2-4 libnss3 libxss1 libasound2
