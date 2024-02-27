@@ -34,9 +34,11 @@ jobs:
       - name: Deploy (justin.beer)
         uses: ./.github/actions/ftp-deploy/
         with:
+          password: ${{ secrets.FTP_PASSWORD }}
           server-dir: public_html/resume/
 
       - name: Deploy (justin-schrader.com)
         uses: ./.github/actions/ftp-deploy/
         with:
+          password: ${{ secrets.FTP_PASSWORD }}
           server-dir: public_html/justin-schrader.com/resume/

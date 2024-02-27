@@ -1,6 +1,10 @@
 name: 'FTP deploy'
 description: 'Deploys to both domains (justin.beer and justin-schrader.com)'
 inputs:
+  password:
+    description: 'FTP password'
+    required: true
+    default: 'not-a-real-password'
   server-dir:
     description: 'Output directory on the server'
     required: true
@@ -17,7 +21,7 @@ runs:
       with: 
         server: ftp.justin.beer
         username: admin@justin.beer
-        password: ${{ secrets.FTP_PASSWORD || 'mock-ftp-pass' }}
+        password: ${{ inputs.password }}
         local-dir: ./dist/
         server-dir: ${{ inputs.server-dir }}
         dry-run: ${{ env.ACT }}
