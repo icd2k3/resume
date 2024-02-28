@@ -5,30 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="Description" content="Justin Schrader's resume">
     <title>Justin Schrader's Resume</title>
-    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap" rel="stylesheet">
     <style>
-      /* printing rules */
-      @page {
-        size: A4;
-      }
-      @media print {
-        html {
-          background: #FFF;
-        }
-        footer a, footer button {
-          display: none;
-        }
-        body section {
-          margin: 20px 0 0 0;
-        }
-        body section:nth-child(3) {
-          margin: 20px 0 10px;
-        }
-        body dl {
-          margin-bottom: 0;
-        }
-      }
-
       /* global rules */
       html {
         background: #F1F1F1;
@@ -37,7 +14,9 @@
         font-family: Helvetica, Arial, sans-serif;
         font-size: 14px;
         margin: 0 auto;
-        width: 680px;
+        width: auto;
+        max-width: 680px;
+        min-width: 320px;
         padding: 40px 20px;
         background: #FFF;
         line-height: 20px;
@@ -55,6 +34,8 @@
         text-align: right;
         text-transform: uppercase;
         font-weight: normal;
+        position: relative;
+        top: 2px;
       }
       h3 {
         font-size: 18px;
@@ -62,10 +43,8 @@
       h3 span {
         font-size: 16px;
       }
-      p:first-child {
-        margin-top: 0;
-      }
-      p:last-child {
+      p {
+        color: #666;
         margin-bottom: 0;
       }
       address {
@@ -85,7 +64,7 @@
       /* Header content */
       header {
         display: flex;
-        margin-left: 155px;
+        margin-left: 135px;
         margin-bottom: 30px;
       }
       header > div {
@@ -146,7 +125,7 @@
       /* main content rows */
       section {
         display: grid;
-        grid-template-columns: 110px auto;
+        grid-template-columns: 90px auto;
         grid-gap: 20px;
         grid-auto-rows: minmax(0, auto);
         margin: 30px 0;
@@ -168,8 +147,8 @@
       dl:first-child {
         margin-top: 0;
       }
-      dd:nth-child(2) {
-        margin: 0 10px;
+      dt, dd:nth-child(2) {
+        margin-right: 10px;
       }
       dd:nth-child(3) {
         color: #666;
@@ -207,22 +186,86 @@
       footer {
         display: flex;
         position: fixed;
-        bottom: 20px;
-        right: 20px;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        justify-content: space-between;
+        padding: 20px;
+        box-sizing: border-box;
+      }
+      footer div {
+        display: flex;
       }
       footer a, footer button {
         margin-left: 10px;
         cursor: pointer;
         padding: 5px 10px;
         background: #000;
-        border: 0;
+        border: 1px solid #000;
         color: #fff;
         border-radius: 5px;
+        display: inline-block;
+        box-sizing: border-box;
+      }
+      footer a:first-child {
+        margin-left: 0;
       }
       footer button {
-        background: transparent;
-        border: 1px solid #000;
+        background: #fff;
         color: #000;
+      }
+
+      /* mobile */
+      @media only screen and (max-width: 1200px) {
+        main {
+          padding-bottom: 40px;
+        }
+
+        footer {
+          background-color: #fff;
+          padding: 10px;
+          border-top: 1px solid #F1F1F1;
+        }
+      }
+
+      @media only screen and (max-width: 680px) {
+        h2 {
+          display: none;
+        }
+
+        section {
+          grid-template-columns: none;
+        }
+
+        header {
+          margin-left: 25px
+        }
+
+        li.tech {
+          margin-bottom: 10px;
+        }
+      }
+
+      /* printing rules */
+      @page {
+        size: A4;
+      }
+      @media print {
+        html {
+          background: #FFF;
+        }
+        footer {
+          display: none;
+        }
+        body section {
+          margin: 20px 0 0 0;
+        }
+        body section:nth-child(3) {
+          margin: 20px 0 10px;
+        }
+        body dl {
+          margin-bottom: 0;
+        }
       }
     </style>
   </head>
@@ -239,10 +282,10 @@
             (585) 281-0579
           </a>
           <a
-            href="https://github.com/icd2k3"
+            href="https://www.linkedin.com/in/justin-schrader/"
             target="_blank"
           >
-            github.com/icd2k3
+            linkedin.com/in/justin-schrader
           </a>
         </address>
       </div>
@@ -251,7 +294,7 @@
       <section>
         <h2>Hello</h2>
         <div>
-          <p>Hi, I'm Justin. I like building user interfaces.</p>
+          <h3>Hi, I'm Justin. I like building user interfaces.</h3>
           <p>
             I have over 15 years of experience working with designers, PMs, customers, and other engineers to deliver the best UI possible.
             I strive for reliable, performant, and well-tested code in every feature I help to create.
@@ -272,13 +315,13 @@
               <time datetime="2018-10-01">Oct. 2018</time> - Present (5y)
             </dd>
             <dd>
-              <b>Distributed Tracing team</b>
+              Distributed Tracing team
               <ul>
-                <li>Worked with designers, PMs, and other engineers to deliver new features.</li>
-                <li>Helped define UI coding standards and working agreements.</li>
-                <li>Mentored, and paired with, other engineers to help them ramp up.</li>
-                <li>Reduced bundle size by a significant amount (while shipping new features).</li>
-                <li>Contributed improvements to the org-wide shared component library.</li>
+                <li>Collaborated with design, PMs, and fellow engineers to implement innovative features.</li>
+                <li>Played a key role in establishing UI coding standards and working agreements.</li>
+                <li>Provided mentorship for colleagues to facilitate their skill development.</li>
+                <li>Achieved a substantial reduction in bundle size while introducing new features.</li>
+                <li>Contributed valuable enhancements to the org-wide shared component library.</li>
                 <li>Improved test coverage, reliability, performance, and maintainability.</li>
               </ul>
             </dd>
@@ -390,8 +433,11 @@
       </section>
     </main>
     <footer>
-      <button aria-label="Print resume" onclick="window.print()">Print</button>
-      <a aria-label="Download PDF resume" href="justin-schrader-resume.pdf" download="justin-schrader-resume.pdf">PDF</a>
+      <a aria-label="Git repo" href="https://github.com/icd2k3/resume" target="_blank" title="Visit GitHub repository for this resume">Repo</a>
+      <div>
+        <button aria-label="Print resume" onclick="window.print()" title="Print resume">Print</button>
+        <a aria-label="Download PDF resume" href="justin-schrader-resume.pdf" download="justin-schrader-resume.pdf" title="Download PDF">Download PDF</a>
+      </div>
     </footer>
   </body>
 </html>
