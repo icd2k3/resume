@@ -16,4 +16,4 @@ I created my resume in HTML/CSS years ago (because why not?) but recently got ti
 
 GitHub actions now takes care of the rest. When I merge resume updates into master, it is compressed, uploaded, and a PDF is generated automatically using `puppeteer` 🏝️
 
-Admittedly a bit overkill, but fun to set up!
+A bit overkill, but fun to set up!
