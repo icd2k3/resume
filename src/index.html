@@ -1,449 +1,500 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="Description" content="Justin Schrader's resume">
-    <title>Justin Schrader's Resume</title>
-    <style>
-      /* global rules */
-      html {
-        background: #F1F1F1;
-      }
-      body {
-        font-family: Helvetica, Arial, sans-serif;
-        font-size: 14px;
-        margin: 0 auto;
-        width: auto;
-        max-width: 680px;
-        min-width: 320px;
-        padding: 40px 20px;
-        background: #FFF;
-        line-height: 20px;
-        -webkit-print-color-adjust: exact;
-      }
-      h1,
-      h2,
-      h3,
-      h4 {
-        margin: 0;
-      }
-      h2 {
-        color: #616161;
-        font-size: 12px;
-        text-align: right;
-        text-transform: uppercase;
-        font-weight: normal;
-        position: relative;
-        top: 2px;
-      }
-      h3 {
-        font-size: 18px;
-      }
-      h3 span {
-        font-size: 16px;
-      }
-      p {
-        color: #616161;
-        margin-bottom: 0;
-      }
-      address {
-        font-style: normal;
-      }
-      a {
-        color: #000;
-        text-decoration: none;
-      }
-      a:hover, button:hover {
-        text-decoration: underline;
-      }
-      dd {
-        margin-left: 0;
-      }
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="Description" content="Justin Schrader's resume" />
+		<title>Justin Schrader's Resume</title>
+		<style>
+			/* global rules */
+			html {
+				background: #f1f1f1;
+			}
+			body {
+				font-family: Helvetica, Arial, sans-serif;
+				font-size: 14px;
+				margin: 0 auto;
+				width: auto;
+				max-width: 680px;
+				min-width: 320px;
+				padding: 40px 20px;
+				background: #fff;
+				line-height: 20px;
+				-webkit-print-color-adjust: exact;
+			}
+			h1,
+			h2,
+			h3,
+			h4 {
+				margin: 0;
+			}
+			h2 {
+				color: #616161;
+				font-size: 12px;
+				text-align: right;
+				text-transform: uppercase;
+				font-weight: normal;
+				position: relative;
+				top: 2px;
+			}
+			h3 {
+				font-size: 18px;
+			}
+			h3 span {
+				font-size: 16px;
+			}
+			p {
+				color: #616161;
+				margin-bottom: 0;
+			}
+			address {
+				font-style: normal;
+			}
+			a {
+				color: #000;
+				text-decoration: none;
+			}
+			a:hover,
+			button:hover {
+				text-decoration: underline;
+			}
+			dd {
+				margin-left: 0;
+			}
 
-      /* Header content */
-      header {
-        display: flex;
-        margin-left: 135px;
-        margin-bottom: 30px;
-      }
-      header > div {
-        margin-top: -12px;
-      }
-      header address {
-        margin-top: 8px;
-      }
-      header a {
-        display: inline-block;
-        margin-right: 15px;
-      }
+			/* Header content */
+			header {
+				display: flex;
+				margin-left: 135px;
+				margin-bottom: 30px;
+			}
+			header > div {
+				margin-top: -12px;
+			}
+			header address {
+				margin-top: 8px;
+			}
+			header a {
+				display: inline-block;
+				margin-right: 15px;
+			}
 
-      /* JS logo icon thing */
-      figure {
-        width: 25px;
-        height: 25px;
-        flex-shrink: 0;
-        margin: 0;
-        left: -20px;
-        position: relative;
-        transform: rotate(-45deg);
-        margin-inline-start: 0;
-        margin-inline-end: 0;
-        box-sizing: border-box;
-        border-right: 5px solid #000;
-        border-bottom: 5px solid #000;
-      }
-      figure::before {
-        content: "";
-        display: block;
-        height: 5px;
-        width: 5px;
-        background: #000;
-        position: absolute;
-        top: -10px;
-        left: 10px;
-      }
-      figure::after {
-        content: "";
-        display: block;
-        height: 5px;
-        width: 15px;
-        background: #000;
-        position: absolute;
-        top: 0;
-        left: 20px;
-      }
-      figure > div {
-        width: 15px;
-        height: 15px;
-        position: absolute;
-        border-right: inherit;
-        border-bottom: inherit;
-        box-sizing: border-box;
-      }
+			/* JS logo icon thing */
+			figure {
+				width: 25px;
+				height: 25px;
+				flex-shrink: 0;
+				margin: 0;
+				left: -20px;
+				position: relative;
+				transform: rotate(-45deg);
+				margin-inline-start: 0;
+				margin-inline-end: 0;
+				box-sizing: border-box;
+				border-right: 5px solid #000;
+				border-bottom: 5px solid #000;
+			}
+			figure::before {
+				content: '';
+				display: block;
+				height: 5px;
+				width: 5px;
+				background: #000;
+				position: absolute;
+				top: -10px;
+				left: 10px;
+			}
+			figure::after {
+				content: '';
+				display: block;
+				height: 5px;
+				width: 15px;
+				background: #000;
+				position: absolute;
+				top: 0;
+				left: 20px;
+			}
+			figure > div {
+				width: 15px;
+				height: 15px;
+				position: absolute;
+				border-right: inherit;
+				border-bottom: inherit;
+				box-sizing: border-box;
+			}
 
-      /* main content rows */
-      section {
-        display: grid;
-        grid-template-columns: 90px auto;
-        grid-gap: 20px;
-        grid-auto-rows: minmax(0, auto);
-        margin: 30px 0;
-      }
-      section:nth-child(3) {
-        margin: 0 0 -10px;
-      }
+			/* main content rows */
+			section {
+				display: grid;
+				grid-template-columns: 90px auto;
+				grid-gap: 20px;
+				grid-auto-rows: minmax(0, auto);
+				margin: 30px 0;
+			}
+			section:nth-child(3) {
+				margin: 0 0 -10px;
+			}
 
-      /* right side text positioning */
-      dl {
-        display: flex;
-        flex-wrap: wrap;
-        align-items: baseline;
-        margin-bottom: 20px;
-      }
-      dl:last-child {
-        margin-bottom: 0;
-      }
-      dl:first-child {
-        margin-top: 0;
-      }
-      dt, dd:nth-child(2) {
-        margin-right: 10px;
-      }
-      dd:nth-child(3) {
-        color: #616161;
-        font-size: 12px;
-      }
-      dd:nth-child(4) {
-        flex-basis: 100%;
-        width: 0;
-        margin-top: 3px;
-        color: #616161;
-      }
+			/* right side text positioning */
+			dl {
+				display: flex;
+				flex-wrap: wrap;
+				align-items: baseline;
+				margin-bottom: 20px;
+			}
+			dl:last-child {
+				margin-bottom: 0;
+			}
+			dl:first-child {
+				margin-top: 0;
+			}
+			dt,
+			dd:nth-child(2) {
+				margin-right: 10px;
+			}
+			dd:nth-child(3) {
+				color: #616161;
+				font-size: 12px;
+			}
+			dd:nth-child(4) {
+				flex-basis: 100%;
+				width: 0;
+				margin-top: 3px;
+				color: #616161;
+			}
 
-      ul {
-        margin: 10px 0 0 0;
-        padding: 0 17px;
-      }
+			ul {
+				margin: 10px 0 0 0;
+				padding: 0 17px;
+			}
 
-      /* techs */
-      ul.tech {
-        padding: 0;
-        margin: 0;
-        list-style-type: circle;
-        position: relative;
-        top: -4px;
-      }
-      li.tech {
-        display: inline-block;
-        padding: 4px 8px;
-        background: #F1F1F1;
-        margin-right: 5px;
-        border-radius: 5px;
-      }
+			/* techs */
+			ul.tech {
+				padding: 0;
+				margin: 0;
+				list-style-type: circle;
+				position: relative;
+				top: -4px;
+			}
+			li.tech {
+				display: inline-block;
+				padding: 4px 8px;
+				background: #f1f1f1;
+				margin-right: 5px;
+				border-radius: 5px;
+			}
 
-      /* footer */
-      footer {
-        display: flex;
-        position: fixed;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        justify-content: space-between;
-        padding: 20px;
-        box-sizing: border-box;
-      }
-      footer div {
-        display: flex;
-      }
-      footer a, footer button {
-        margin-left: 10px;
-        cursor: pointer;
-        padding: 5px 10px;
-        background: #000;
-        border: 1px solid #000;
-        color: #fff;
-        border-radius: 5px;
-        display: inline-block;
-        box-sizing: border-box;
-      }
-      footer a:first-child {
-        margin-left: 0;
-      }
-      footer button {
-        background: #fff;
-        color: #000;
-      }
+			/* footer */
+			footer {
+				display: flex;
+				position: fixed;
+				bottom: 0;
+				left: 0;
+				width: 100%;
+				justify-content: space-between;
+				padding: 20px;
+				box-sizing: border-box;
+			}
+			footer div {
+				display: flex;
+			}
+			footer a,
+			footer button {
+				margin-left: 10px;
+				cursor: pointer;
+				padding: 5px 10px;
+				background: #000;
+				border: 1px solid #000;
+				color: #fff;
+				border-radius: 5px;
+				display: inline-block;
+				box-sizing: border-box;
+			}
+			footer a:first-child {
+				margin-left: 0;
+			}
+			footer button {
+				background: #fff;
+				color: #000;
+			}
 
-      /* mobile */
-      @media only screen and (max-width: 1200px) {
-        main {
-          padding-bottom: 40px;
-        }
+			/* mobile */
+			@media only screen and (max-width: 1200px) {
+				main {
+					padding-bottom: 40px;
+				}
 
-        footer {
-          background-color: #fff;
-          padding: 10px;
-          border-top: 1px solid #F1F1F1;
-        }
-      }
+				footer {
+					background-color: #fff;
+					padding: 10px;
+					border-top: 1px solid #f1f1f1;
+				}
+			}
 
-      @media only screen and (max-width: 680px) {
-        h2 {
-          display: none;
-        }
+			@media only screen and (max-width: 680px) {
+				h2 {
+					display: none;
+				}
 
-        section {
-          grid-template-columns: none;
-        }
+				section {
+					grid-template-columns: none;
+				}
 
-        header {
-          margin-left: 25px
-        }
+				header {
+					margin-left: 25px;
+				}
 
-        li.tech {
-          margin-bottom: 10px;
-        }
-      }
+				li.tech {
+					margin-bottom: 10px;
+				}
+			}
 
-      /* printing rules */
-      @page {
-        size: A4;
-      }
-      @media print {
-        html {
-          background: #FFF;
-        }
-        footer {
-          display: none;
-        }
-        body section {
-          margin: 20px 0 0 0;
-        }
-        body section:nth-child(3) {
-          margin: 20px 0 10px;
-        }
-        body dl {
-          margin-bottom: 0;
-        }
-      }
-    </style>
-  </head>
-  <body>
-    <header>
-      <figure><div></div></figure>
-      <div>
-        <h1>Justin Schrader</h1>
-        <address>
-          <a href="mailto:me@justin-schrader.com">
-            me@justin-schrader.com
-          </a>
-          <a href="tel:+15852810579">
-            (585) 281-0579
-          </a>
-          <a
-            href="https://www.linkedin.com/in/justin-schrader/"
-            target="_blank"
-          >
-            linkedin.com/in/justin-schrader
-          </a>
-        </address>
-      </div>
-    </header>
-    <main>
-      <section>
-        <h2>Hello</h2>
-        <div>
-          <h3>I'm Justin. I like building user interfaces.</h3>
-          <p>
-            I offer more than 15 years of dedicated expertise in FE engineering, coupled with a background in
-            UI/UX design. My goal in each commit is to deliver maintainable, efficient, and thoroughly 
-            tested code that matches design specifications.
-          </p>
-        </div>
-      </section>
-      <section>
-        <h2>Strengths</h2>
-        <ul class="tech">
-          <li class="tech">JavaScript</li>
-          <li class="tech">React</li>
-          <li class="tech">Redux</li>
-          <li class="tech">Typescript</li>
-          <li class="tech">Test Coverage</li>
-          <li class="tech">CI/CD</li>
-          <li class="tech">UI/UX</li>
-        </ul>
-      </section>
-      <section>
-        <h2>Experience</h2>
-        <div>
-          <dl>
-            <dt>
-              <h3>New Relic</h3>
-            </dt>
-            <dd>
-              <h4>Senior Software Engineer</h4>
-            </dd>
-            <dd>
-              <time datetime="2018-10-01">Oct. 2018</time> - Present (5y)
-            </dd>
-            <dd>
-              Helping people manage and map their complex systems with Distributed Tracing.
-              <ul>
-                <li>React, Typescript, Redux engineering in a large platform consuming large datasets.</li>
-                <li>Collaborate with design, PMs, and fellow engineers to implement innovative features.</li>
-                <li>Improve test coverage, reliability, performance, and maintainability.</li>
-                <li>Decipher, untangle, and refactor years-old tech debt.</li>
-                <li>Provide mentorship for colleagues to facilitate their skill development.</li>
-                <li>Substantially reduce bundle size through dependency management and simplification.</li>
-                <li>Contribute valuable enhancements to the org-wide shared component library.</li>
-                <li>Play a key role in establishing UI coding standards and working agreements.</li>
-              </ul>
-            </dd>
-          </dl>
-          <dl>
-            <dt>
-              <h3>Koan <span>(acq. Quantive)</span></h3>
-            </dt>
-            <dd>
-              <h4>Senior Frontend Engineer</h4>
-            </dd>
-            <dd>
-              <time datetime="2016-11-01">Nov. 2016</time> - <time datetime="2018-10-01">Oct. 2018</time> (2y)
-            </dd>
-            <dd>
-              As a founding team member, I led the initial development of our React application, implemented essential tooling, 
-              and optimized our build processes. Collaborating closely with founders, designers, customers, and engineers, 
-              I played a key role in enhancing our product offerings, focusing on management tools, team alignment, and OKR tracking.
-            </dd>
-          </dl>
-          <dl>
-            <dt>
-              <h3>Cengage</h3>
-            </dt>
-            <dd>
-              <h4>Senior Application Architect</h4>
-            </dd>
-            <dd>
-              <time datetime="2015-10-01">Oct. 2015</time> - <time datetime="2016-10-01">Oct. 2016</time> (1y)
-            </dd>
-            <dd>
-              In my role as an acqui-hire, I undertook responsibilities such as maintaining the Pathbrite platform, 
-              the development of new features, and actively contributing to research initiatives and roadmap planning.
-            </dd>
-          </dl>
-          <dl>
-            <dt>
-              <h3>Pathbrite <span>(acq. Cengage)</span></h3>
-            </dt>
-            <dd>
-              <h4>Lead Frontend Engineer</h4>
-            </dd>
-            <dd>
-              <time datetime="2018-03-01">Mar. 2013</time> - <time datetime="2015-10-01">Oct. 2015</time> (2yr)
-            </dd>
-            <dd>
-              A comprehensive portfolio platform, assessment tool, and LMS tailored for teachers, 
-              students, and employers alike. My responsibilities included developing new features, 
-              optimizing for mobile devices, and improving reliability & maintainability.
-            </dd>
-          </dl>
-          <dl>
-            <dt>
-              <h3>Luxurious Animals</h3>
-            </dt>
-            <dd>
-              <h4>Senior Interactive Developer</h4>
-            </dd>
-            <dd>
-              <time datetime="2008-07-01">Jul. 2008</time> - <time datetime="2018-03-01">Mar. 2013</time> (5y)
-            </dd>
-            <dd>
-              Crafted, designed, and animated advertising solutions for renowned brands such as HBO, Morgan Stanley, 
-              and Porsche. Delivered diverse projects under stringent deadlines ranging from websites, games, 
-              and applications to ads and commercials.
-            </dd>
-          </dl>
-          <dl>
-            <dt>
-              <h3>Internships & freelance</h3>
-            </dt>
-            <dd>
-              <h4>Design, dev, and animation</h4>
-            </dd>
-            <dd>
-              <time datetime="2006-06-01">Jun. 2006</time> - <time datetime="2008-09-01">Sept. 2008</time> (2y)
-            </dd>
-            <dd>
-              2007 summer internship at <strong>Big Spaceship</strong> working on a marketing site for Universal Studios.
-              Contract design and web dev work for <strong>Blue Pixel Studios</strong> 06-08.
-            </dd>
-          </dl>
-        </div>
-      </section>
-      <section>
-        <h2>Education</h2>
-        <div>
-          <dl>
-            <dt>
-              <h3>RIT</h3>
-            </dt>
-            <dd>
-              <h4>New Media Design & Imaging</h4>
-            </dd>
-            <dd>
-              <time datetime="2004">2004</time> - <time datetime="2008">2008</time>
-            </dd>
-          </dl>
-        </div>
-      </section>
-    </main>
-    <footer>
-      <a aria-label="Git repo" href="https://github.com/icd2k3/resume" target="_blank" title="Visit GitHub repository for this resume">Repo</a>
-      <div>
-        <button aria-label="Print resume" onclick="window.print()" title="Print resume">Print</button>
-        <a aria-label="Download PDF resume" href="justin-schrader-resume.pdf" download="justin-schrader-resume.pdf" title="Download PDF">Download PDF</a>
-      </div>
-    </footer>
-  </body>
+			/* printing rules */
+			@page {
+				size: A4;
+			}
+			@media print {
+				html {
+					background: #fff;
+				}
+				footer {
+					display: none;
+				}
+				body section {
+					margin: 20px 0 0 0;
+				}
+				body section:nth-child(3) {
+					margin: 20px 0 10px;
+				}
+				body dl {
+					margin-bottom: 0;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<header>
+			<figure><div></div></figure>
+			<div>
+				<h1>Justin Schrader</h1>
+				<address>
+					<a href="mailto:me@justin-schrader.com"> me@justin-schrader.com </a>
+					<a href="tel:+15852810579"> (585) 281-0579 </a>
+					<a
+						href="https://www.linkedin.com/in/justin-schrader/"
+						target="_blank"
+					>
+						linkedin.com/in/justin-schrader
+					</a>
+				</address>
+			</div>
+		</header>
+		<main>
+			<section>
+				<h2>Hello</h2>
+				<div>
+					<h3>I'm Justin. I like building user interfaces.</h3>
+					<p>
+						I offer more than 15 years of dedicated expertise in FE engineering,
+						coupled with a background in UI/UX design. My goal in each commit is
+						to deliver maintainable, efficient, and thoroughly tested code that
+						matches design specifications.
+					</p>
+				</div>
+			</section>
+			<section>
+				<h2>Strengths</h2>
+				<ul class="tech">
+					<li class="tech">JavaScript</li>
+					<li class="tech">React</li>
+					<li class="tech">Redux</li>
+					<li class="tech">Typescript</li>
+					<li class="tech">Test Coverage</li>
+					<li class="tech">CI/CD</li>
+					<li class="tech">UI/UX</li>
+				</ul>
+			</section>
+			<section>
+				<h2>Experience</h2>
+				<div>
+					<dl>
+						<dt>
+							<h3>New Relic</h3>
+						</dt>
+						<dd>
+							<h4>Senior Software Engineer</h4>
+						</dd>
+						<dd><time datetime="2018-10-01">Oct. 2018</time> - Present (5y)</dd>
+						<dd>
+							Helping people manage and map their complex systems with
+							Distributed Tracing.
+							<ul>
+								<li>
+									React, Typescript, Redux engineering in a large platform
+									consuming large datasets.
+								</li>
+								<li>
+									Collaborate with design, PMs, and fellow engineers to
+									implement innovative features.
+								</li>
+								<li>
+									Improve test coverage, reliability, performance, and
+									maintainability.
+								</li>
+								<li>
+									Provide mentorship for colleagues to facilitate their skill
+									development.
+								</li>
+								<li>
+									Substantially reduce bundle size through dependency management
+									and simplification.
+								</li>
+								<li>
+									Contribute valuable enhancements to the org-wide shared
+									component library.
+								</li>
+								<li>
+									Play a key role in establishing UI coding standards and
+									working agreements.
+								</li>
+							</ul>
+						</dd>
+					</dl>
+					<dl>
+						<dt>
+							<h3>Koan <span>(acq. Quantive)</span></h3>
+						</dt>
+						<dd>
+							<h4>Senior Frontend Engineer</h4>
+						</dd>
+						<dd>
+							<time datetime="2016-11-01">Nov. 2016</time> -
+							<time datetime="2018-10-01">Oct. 2018</time> (2y)
+						</dd>
+						<dd>
+							As a founding team member, I led the initial development of our
+							React application, implemented essential tooling, and optimized
+							our build processes. Collaborating closely with founders,
+							designers, customers, and engineers, I played a key role in
+							enhancing our product offerings, focusing on management tools,
+							team alignment, and OKR tracking.
+						</dd>
+					</dl>
+					<dl>
+						<dt>
+							<h3>Cengage</h3>
+						</dt>
+						<dd>
+							<h4>Senior Application Architect</h4>
+						</dd>
+						<dd>
+							<time datetime="2015-10-01">Oct. 2015</time> -
+							<time datetime="2016-10-01">Oct. 2016</time> (1y)
+						</dd>
+						<dd>
+							In my role as an acqui-hire, I undertook responsibilities such as
+							maintaining the Pathbrite platform, the development of new
+							features, and actively contributing to research initiatives and
+							roadmap planning.
+						</dd>
+					</dl>
+					<dl>
+						<dt>
+							<h3>Pathbrite <span>(acq. Cengage)</span></h3>
+						</dt>
+						<dd>
+							<h4>Lead Frontend Engineer</h4>
+						</dd>
+						<dd>
+							<time datetime="2018-03-01">Mar. 2013</time> -
+							<time datetime="2015-10-01">Oct. 2015</time> (2yr)
+						</dd>
+						<dd>
+							A comprehensive portfolio platform, assessment tool, and LMS
+							tailored for teachers, students, and employers alike. My
+							responsibilities included developing new features, optimizing for
+							mobile devices, and improving reliability & maintainability.
+						</dd>
+					</dl>
+					<dl>
+						<dt>
+							<h3>Luxurious Animals</h3>
+						</dt>
+						<dd>
+							<h4>Senior Interactive Developer</h4>
+						</dd>
+						<dd>
+							<time datetime="2008-07-01">Jul. 2008</time> -
+							<time datetime="2018-03-01">Mar. 2013</time> (5y)
+						</dd>
+						<dd>
+							Crafted, designed, and animated advertising solutions for renowned
+							brands such as HBO, Morgan Stanley, and Porsche. Delivered diverse
+							projects under stringent deadlines ranging from websites, games,
+							and applications to ads and commercials.
+						</dd>
+					</dl>
+					<dl>
+						<dt>
+							<h3>Internships & freelance</h3>
+						</dt>
+						<dd>
+							<h4>Design, dev, and animation</h4>
+						</dd>
+						<dd>
+							<time datetime="2006-06-01">Jun. 2006</time> -
+							<time datetime="2008-09-01">Sept. 2008</time> (2y)
+						</dd>
+						<dd>
+							2007 summer internship at <strong>Big Spaceship</strong> working
+							on a marketing site for Universal Studios. Contract design and web
+							dev work for <strong>Blue Pixel Studios</strong> 06-08.
+						</dd>
+					</dl>
+				</div>
+			</section>
+			<section>
+				<h2>Education</h2>
+				<div>
+					<dl>
+						<dt>
+							<h3>RIT</h3>
+						</dt>
+						<dd>
+							<h4>New Media Design & Imaging</h4>
+						</dd>
+						<dd>
+							<time datetime="2004">2004</time> -
+							<time datetime="2008">2008</time>
+						</dd>
+					</dl>
+				</div>
+			</section>
+		</main>
+		<footer>
+			<a
+				aria-label="Git repo"
+				href="https://github.com/icd2k3/resume"
+				target="_blank"
+				title="Visit GitHub repository for this resume"
+				>Repo</a
+			>
+			<div>
+				<button
+					aria-label="Print resume"
+					onclick="window.print()"
+					title="Print resume"
+				>
+					Print
+				</button>
+				<a
+					aria-label="Download PDF resume"
+					href="justin-schrader-resume.pdf"
+					download="justin-schrader-resume.pdf"
+					title="Download PDF"
+					>Download PDF</a
+				>
+			</div>
+		</footer>
+	</body>
 </html>
