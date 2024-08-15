@@ -65,14 +65,11 @@
 			/* Header content */
 			header {
 				display: flex;
-				margin-left: 135px;
+				margin-left: 105px;
 				margin-bottom: 30px;
 			}
-			header > div {
-				margin-top: -12px;
-			}
 			header address {
-				margin-top: 8px;
+				margin-top: 10px;
 			}
 			header a {
 				display: inline-block;
@@ -81,46 +78,49 @@
 
 			/* JS logo icon thing */
 			figure {
-				width: 25px;
-				height: 25px;
-				flex-shrink: 0;
-				margin: 0;
-				left: -20px;
+				width: 50px;
+				height: 50px;
 				position: relative;
-				transform: rotate(-45deg);
-				margin-inline-start: 0;
 				margin-inline-end: 0;
-				box-sizing: border-box;
-				border-right: 5px solid #000;
-				border-bottom: 5px solid #000;
+				margin-block-start: 0;
+				margin-inline-start: 0;
+				margin-block-end: 0;
+				margin-right: 10px;
 			}
-			figure::before {
-				content: '';
-				display: block;
-				height: 5px;
-				width: 5px;
-				background: #000;
+
+			figure > div {
+				width: calc(100% - 12px);
+				height: 12px;
 				position: absolute;
-				top: -10px;
-				left: 10px;
+				top: 0;
+				left: 6px;
+				background: #000;
 			}
+
+			figure::before,
 			figure::after {
 				content: '';
 				display: block;
-				height: 5px;
-				width: 15px;
-				background: #000;
 				position: absolute;
-				top: 0;
-				left: 20px;
-			}
-			figure > div {
-				width: 15px;
-				height: 15px;
-				position: absolute;
-				border-right: inherit;
-				border-bottom: inherit;
+				border: 12px solid #000;
+				border-radius: 50%;
+				width: 100%;
+				height: 100%;
+				transform: rotate(45deg);
 				box-sizing: border-box;
+				z-index: 1;
+			}
+
+			figure::before {
+				border-color: transparent transparent transparent #000;
+				left: calc(50% - 6px);
+				top: 0;
+			}
+
+			figure::after {
+				border-color: transparent #000 transparent transparent;
+				right: calc(50% - 6px);
+				top: -4px;
 			}
 
 			/* main content rows */
