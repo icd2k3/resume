@@ -13,12 +13,12 @@
 			}
 			body {
 				font-family: Helvetica, Arial, sans-serif;
-				font-size: 14px;
+				font-size: 0.87em;
 				margin: 0 auto;
 				width: auto;
 				max-width: 680px;
 				min-width: 320px;
-				padding: 40px 20px;
+				padding: 30px 20px;
 				background: #fff;
 				line-height: 20px;
 				-webkit-print-color-adjust: exact;
@@ -127,6 +127,10 @@
 				font-size: 12px;
 			}
 			dd:nth-child(4) {
+				display: block;
+				width: 100%;
+			}
+			dd.desc {
 				flex-basis: 100%;
 				width: 0;
 				margin-top: 3px;
@@ -134,8 +138,14 @@
 			}
 
 			ul {
-				margin: 10px 0 0 0;
+				margin: 8px 0 0 0;
 				padding: 0 17px;
+			}
+
+			span.years {
+				color: #000;
+				padding-left: 4px;
+				font-weight: bold;
 			}
 
 			/* techs */
@@ -152,6 +162,20 @@
 				background: #f1f1f1;
 				margin-right: 5px;
 				border-radius: 5px;
+			}
+			ul.stack {
+				list-style-type: none;
+				padding: 0;
+				margin: 4px 0;
+				display: inline-flex;
+				align-items: center;
+			}
+			ul.stack li {
+				display: inline-block;
+				padding: 0 5px;
+				background: #f1f1f1;
+				margin-right: 4px;
+				border-radius: 4px;
 			}
 
 			/* footer */
@@ -244,12 +268,14 @@
 				}
 				body {
 					padding-bottom: 0;
+					font-size: 0.75em;
+					line-height: 1.6em;
 				}
 				body section {
-					margin: 20px 0 0 0;
+					margin: 14px 0 0 0;
 				}
 				body section:nth-child(3) {
-					margin: 20px 0 10px;
+					margin: 14px 0 10px;
 				}
 				body dl {
 					margin-bottom: 0;
@@ -294,10 +320,10 @@
 				<div>
 					<h3>I'm Justin. I like building user interfaces.</h3>
 					<p>
-						I offer more than 15 years of experience in user interface engineering,
-						coupled with a background in design. My goal in each commit is
-						to deliver maintainable, efficient, and thoroughly tested code that
-						matches design specifications.
+						I offer more than 15 years of experience in user interface
+						engineering, coupled with a background in design. My goal in each
+						commit is to deliver maintainable, efficient, and thoroughly tested
+						code that matches design specifications.
 					</p>
 				</div>
 			</section>
@@ -305,9 +331,9 @@
 				<h2>Strengths</h2>
 				<ul class="tech">
 					<li class="tech">JavaScript</li>
-          <li class="tech">TypeScript</li>
+					<li class="tech">TypeScript</li>
 					<li class="tech">React</li>
-          <li class="tech">Test Coverage</li>
+					<li class="tech">Test Coverage</li>
 					<li class="tech">Redux</li>
 					<li class="tech">CI/CD</li>
 					<li class="tech">UI/UX</li>
@@ -323,15 +349,29 @@
 						<dd>
 							<h4>Senior Software Engineer</h4>
 						</dd>
-						<dd><time datetime="2018-10-01">Oct. 2018</time> - Present (5y)</dd>
 						<dd>
-              Helping users understand petabytes of system transaction data through 
-              Distributed Tracing, enabling them to resolve errors, improve latency, and monitor their complex architectures.
+							<time datetime="2018-10-01">Oct. 2018</time> - Present
+							<span class="years">(6 years)</span>
+						</dd>
+						<dd>
+							<ul class="stack">
+								<li>React</li>
+								<li>TypeScript</li>
+								<li>Redux</li>
+								<li>Jest</li>
+								<li>RTL</li>
+								<li>Playwright</li>
+								<li>ESLint</li>
+								<li>Kotlin</li>
+								<li>GraphQL</li>
+							</ul>
+						</dd>
+						<dd class="desc">
+							Helping users understand <strong>petabytes</strong> of system
+							transaction data through Distributed Tracing, enabling them to
+							resolve errors, improve latency, and monitor their complex
+							architectures.
 							<ul>
-								<li>
-									React, Typescript, Redux engineering in a large platform
-									consuming large datasets.
-								</li>
 								<li>
 									Collaborate with design, PMs, and fellow engineers to
 									implement innovative features.
@@ -368,33 +408,43 @@
 						</dd>
 						<dd>
 							<time datetime="2016-11-01">Nov. 2016</time> -
-							<time datetime="2018-10-01">Oct. 2018</time> (2y)
+							<time datetime="2018-10-01">Oct. 2018</time>
+							<span class="years">(2 years)</span>
 						</dd>
 						<dd>
-							As a founding team member, I led the initial development of our
-							React application, implemented essential tooling, and optimized
-							our build processes. Collaborating closely with founders,
-							designers, customers, and engineers, I played a key role in
-							enhancing our product offerings, focusing on management tools,
-							team alignment, and OKR tracking.
+							<ul class="stack">
+								<li>React</li>
+								<li>TypeScript</li>
+								<li>Redux</li>
+								<li>Webpack</li>
+								<li>Jest</li>
+								<li>Sentry</li>
+								<li>PostCSS</li>
+								<li>ESLint</li>
+								<li>Node.js</li>
+							</ul>
 						</dd>
-					</dl>
-					<dl>
-						<dt>
-							<h3>Cengage</h3>
-						</dt>
-						<dd>
-							<h4>Senior Application Architect</h4>
-						</dd>
-						<dd>
-							<time datetime="2015-10-01">Oct. 2015</time> -
-							<time datetime="2016-10-01">Oct. 2016</time> (1y)
-						</dd>
-						<dd>
-							In my role as an acqui-hire, I undertook responsibilities such as
-							maintaining the Pathbrite platform, the development of new
-							features, and actively contributing to research initiatives and
-							roadmap planning.
+						<dd class="desc">
+							Koan (later acquired by Quantive) was a platform for team
+							alignment. We helped managers, individuals, and orgs set and track
+							their objectives and key results (OKRs).
+							<ul>
+								<li>
+									Founding React engineer at fast-paced seed stage startup.
+								</li>
+								<li>
+									Collaborated closely with founders, designers, customers, and
+									engineers.
+								</li>
+								<li>
+									Helped implement essential CI/CD build tooling and error
+									monitoring.
+								</li>
+								<li>
+									Shipped many innovative new features based on customer
+									feedback.
+								</li>
+							</ul>
 						</dd>
 					</dl>
 					<dl>
@@ -406,13 +456,38 @@
 						</dd>
 						<dd>
 							<time datetime="2018-03-01">Mar. 2013</time> -
-							<time datetime="2015-10-01">Oct. 2015</time> (2yr)
+							<time datetime="2015-10-01">Oct. 2016</time>
+							<span class="years">(3 years)</span>
 						</dd>
 						<dd>
-							A comprehensive portfolio platform, assessment tool, and LMS
-							tailored for teachers, students, and employers alike. My
-							responsibilities included developing new features, optimizing for
-							mobile devices, and improving reliability & maintainability.
+							<ul class="stack">
+								<li>JavaScript</li>
+								<li>Backbone</li>
+								<li>SASS</li>
+								<li>Grunt</li>
+								<li>Socket.io</li>
+								<li>Node.js</li>
+							</ul>
+						</dd>
+						<dd class="desc">
+							Pathbrite (later acquired by Cengage) was a comprehensive
+							portfolio platform, grading assessment tool, and LMS tailored for
+							teachers, students, and employers alike.
+							<ul>
+								<li>Lead UI engineer for a small ~25 employee startup.</li>
+								<li>
+									Collaborated closely with design and sales to improve product
+									offerings.
+								</li>
+								<li>
+									Contributed to the growth of engineers through planning,
+									process, and mentorship.
+								</li>
+								<li>
+									Significantly improved maintainability, accessibility, and
+									reliability of the application.
+								</li>
+							</ul>
 						</dd>
 					</dl>
 					<dl>
@@ -424,13 +499,15 @@
 						</dd>
 						<dd>
 							<time datetime="2008-07-01">Jul. 2008</time> -
-							<time datetime="2018-03-01">Mar. 2013</time> (5y)
+							<time datetime="2018-03-01">Mar. 2013</time>
+							<span class="years">(5 years)</span>
 						</dd>
-						<dd>
-							Crafted, designed, and animated advertising solutions for renowned
-							brands such as HBO, Morgan Stanley, and Porsche. Delivered diverse
-							projects under stringent deadlines ranging from websites, games,
-							and applications to ads and commercials.
+						<dd class="desc">
+							Designed, animated, and developed advertising solutions for
+							renowned brands such as HBO, Morgan Stanley, and Porsche.
+							Delivered diverse projects under stringent deadlines ranging from
+							websites, games, and applications to interactive web ads and
+							commercials.
 						</dd>
 					</dl>
 					<dl>
@@ -438,13 +515,14 @@
 							<h3>Internships & freelance</h3>
 						</dt>
 						<dd>
-							<h4>Design, dev, and animation</h4>
+							<h4>Engineering & design</h4>
 						</dd>
 						<dd>
 							<time datetime="2006-06-01">Jun. 2006</time> -
-							<time datetime="2008-09-01">Sept. 2008</time> (2y)
+							<time datetime="2008-09-01">Sept. 2008</time>
+							<span class="years">(2 years)</span>
 						</dd>
-						<dd>
+						<dd class="desc">
 							2007 summer internship at <strong>Big Spaceship</strong> working
 							on a marketing site for Universal Studios. Contract design and web
 							dev work for <strong>Blue Pixel Studios</strong> 06-08.
