@@ -1,0 +1,16 @@
+name: 'Move src/fonts to dist/fonts'
+description: 'Moves the fonts directory from src to dist'
+runs:
+  using: "composite"
+  steps:
+    - name: Create dist directory
+      run: |
+        mkdir -p dist || true
+        echo "Dist directory created successfully!"
+
+    - name: 'Move fonts directory'
+      shell: bash
+      run: |
+        mkdir -p dist/fonts || true
+        cp -R src/fonts dist
+        echo "Fonts moved successfully!"
