@@ -4,6 +4,7 @@ runs:
   using: "composite"
   steps:
     - name: Create dist directory
+      shell: bash
       run: |
         mkdir -p dist || true
         echo "Dist directory created successfully!"
