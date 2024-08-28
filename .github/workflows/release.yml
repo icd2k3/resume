@@ -18,6 +18,7 @@ jobs:
       id-token: write
     steps:
       - uses: actions/checkout@v4
+      - uses: ./.github/actions/move-fonts/
       - uses: ./.github/actions/install-node/
       - uses: ./.github/actions/install-and-cache-node-modules/
       - uses: ./.github/actions/install-linux-dependencies/
