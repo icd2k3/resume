@@ -42,6 +42,7 @@
 			h4 {
 				font-family: 'Open Sauce Two Bold', Helvetica, Arial, sans-serif;
 				margin: 0;
+				font-weight: normal;
 			}
 			h2 {
 				color: #616161;
@@ -49,7 +50,6 @@
 				font-size: 12px;
 				text-align: right;
 				text-transform: uppercase;
-				font-weight: normal;
 				position: relative;
 				top: 2px;
 			}
@@ -68,6 +68,7 @@
 			}
 			strong {
 				font-family: 'Open Sauce Two Bold', Helvetica, Arial, sans-serif;
+				font-weight: normal;
 			}
 			a {
 				color: #000;
@@ -112,15 +113,18 @@
 			}
 
 			/* main content rows */
+			main {
+				display: flex;
+				flex-direction: column;
+				gap: 20px;
+			}
 			section {
 				display: grid;
 				grid-template-columns: 90px auto;
 				grid-gap: 20px;
-				grid-auto-rows: minmax(0, auto);
-				margin: 30px 0;
 			}
-			section:nth-child(3) {
-				margin: 0 0 -10px;
+			section:nth-child(2) h2 {
+				top: 5px;
 			}
 
 			/* right side text positioning */
@@ -171,7 +175,6 @@
 				margin: 0;
 				list-style-type: circle;
 				position: relative;
-				top: -4px;
 			}
 			li.tech {
 				display: inline-block;
@@ -290,12 +293,6 @@
 					padding-bottom: 0;
 					font-size: 0.75em;
 					line-height: 18px;
-				}
-				body section {
-					margin: 14px 0 0 0;
-				}
-				body section:nth-child(3) {
-					margin: 14px 0 10px;
 				}
 				body dl {
 					margin-bottom: 0;
