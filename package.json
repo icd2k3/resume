@@ -18,7 +18,7 @@
   "bugs": {
     "url": "https://github.com/icd2k3/resume/issues"
   },
-  "homepage": "https://justin-schrader.com/resume",
+  "homepage": "https://justinschrader.com/resume",
   "devDependencies": {
     "@types/node": "^20.11.24",
     "html-minifier": "^4.0.0",

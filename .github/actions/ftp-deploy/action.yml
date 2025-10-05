@@ -1,14 +1,14 @@
-name: 'FTP deploy'
-description: 'Deploys to both domains (justin.beer and justin-schrader.com)'
+name: "FTP deploy"
+description: "Deploys to both domains (justin.beer and justinschrader.com)"
 inputs:
   password:
-    description: 'FTP password'
+    description: "FTP password"
     required: true
-    default: 'not-a-real-password'
+    default: "not-a-real-password"
   server-dir:
-    description: 'Output directory on the server'
+    description: "Output directory on the server"
     required: true
-    default: 'public_html/resume/'
+    default: "public_html/resume/"
 runs:
   using: "composite"
   steps:
@@ -18,7 +18,7 @@ runs:
 
     - name: Deploy ${{ inputs.server-dir }}
       uses: SamKirkland/FTP-Deploy-Action@v4.3.4
-      with: 
+      with:
         server: ftp.justin.beer
         username: admin@justin.beer
         password: ${{ inputs.password || 'not-a-real-password' }}
