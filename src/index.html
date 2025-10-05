@@ -5,6 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="Description" content="Justin Schrader's resume" />
     <link rel="icon" href="https://www.justinschrader.com/favicon.ico?v=2" />
+
+    <!-- Preload critical fonts to avoid chaining requests -->
+    <link
+      rel="preload"
+      href="./fonts/OpenSauceOne-Regular.ttf"
+      as="font"
+      type="font/ttf"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="./fonts/OpenSauceOne-Light.ttf"
+      as="font"
+      type="font/ttf"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="./fonts/OpenSauceOne-Bold.ttf"
+      as="font"
+      type="font/ttf"
+      crossorigin
+    />
+
     <title>Justin Schrader's Resume</title>
     <style>
       :root {
@@ -44,14 +68,17 @@
       @font-face {
         font-family: "Open Sauce Two Regular";
         src: url("./fonts/OpenSauceOne-Regular.ttf") format("truetype");
+        font-display: swap;
       }
       @font-face {
         font-family: "Open Sauce Two Light";
         src: url("./fonts/OpenSauceOne-Light.ttf") format("truetype");
+        font-display: swap;
       }
       @font-face {
         font-family: "Open Sauce Two Bold";
         src: url("./fonts/OpenSauceOne-Bold.ttf") format("truetype");
+        font-display: swap;
       }
       /* global rules */
       html {

@@ -1,0 +1,20 @@
+# Font caching - cache fonts for 1 year
+<FilesMatch "\.(ttf|otf|eot|woff|woff2)$">
+    ExpiresActive on
+    ExpiresDefault "access plus 1 year"
+    Header set Cache-Control "public, immutable"
+</FilesMatch>
+
+# General asset caching
+<FilesMatch "\.(css|js|png|jpg|jpeg|gif|ico|svg)$">
+    ExpiresActive on
+    ExpiresDefault "access plus 1 month"
+    Header set Cache-Control "public"
+</FilesMatch>
+
+# HTML caching (shorter duration for content updates)
+<FilesMatch "\.(html|htm)$">
+    ExpiresActive on
+    ExpiresDefault "access plus 1 day"
+    Header set Cache-Control "public"
+</FilesMatch>
