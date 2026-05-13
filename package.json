@@ -6,7 +6,8 @@
   "private": true,
   "scripts": {
     "actions:release:dryrun": "sh ./scripts/release-action-dryrun.sh",
-    "build": "mkdir -p dist && npm run html && npm run pdf",
+    "build": "mkdir -p dist && npm run copy-fonts && npm run html && npm run pdf",
+    "copy-fonts": "cp -R src/fonts dist",
     "html": "html-minifier src/index.html -o dist/index.html --collapse-whitespace --remove-comments --remove-optional-tags --remove-redundant-attributes --remove-script-type-attributes --remove-tag-whitespace --use-short-doctype --minify-css true",
     "pdf": "npx ts-node generatePDF.ts"
   },
